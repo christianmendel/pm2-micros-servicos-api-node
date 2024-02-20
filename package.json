@@ -1,0 +1,29 @@
+{
+  "name": "microservicos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "dev": "nodemon usuarios/indexProduto.ts && nodemon produtos/indexUsuario.ts",
+    "start": "pm2 start build/produtos/indexProduto.js && pm2 start build/usuarios/indexUsuario.js",
+    "stop": "pm2 stop build/produtos/indexProduto.js && pm2 stop build/usuarios/indexUsuario.js",
+    "restart": "pm2 restart build/produtos/indexProduto.js && pm2 restart build/usuarios/indexUsuario.js",
+    "delete": "pm2 delete build/produtos/indexProduto.js && pm2 delete build/usuarios/indexUsuario.js",
+    "list": "pm2 list"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/express": "4.17.21",
+    "@types/node": "20.11.19",
+    "express": "4.18.2",
+    "nodemon": "3.0.3",
+    "pm2": "5.3.1",
+    "sucrase": "3.35.0",
+    "ts-node": "10.9.2",
+    "typescript": "5.3.3"
+  }
+}

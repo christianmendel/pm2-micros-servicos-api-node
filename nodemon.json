@@ -1,0 +1,8 @@
+{
+  "watch": ["produtos", "usuarios"],
+  "ext": "ts",
+  "ignore": [],
+  "execMap": {
+    "ts": ["sucrase-node produtos/index.ts", "sucrase-node usuarios/index.ts"]
+  }
+}
