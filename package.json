@@ -6,11 +6,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
-    "dev": "nodemon usuarios/indexProduto.ts && nodemon produtos/indexUsuario.ts",
-    "start": "pm2 start build/produtos/indexProduto.js && pm2 start build/usuarios/indexUsuario.js",
-    "stop": "pm2 stop build/produtos/indexProduto.js && pm2 stop build/usuarios/indexUsuario.js",
-    "restart": "pm2 restart build/produtos/indexProduto.js && pm2 restart build/usuarios/indexUsuario.js",
-    "delete": "pm2 delete build/produtos/indexProduto.js && pm2 delete build/usuarios/indexUsuario.js",
+    "dev": "nodemon usuarios/index.ts && nodemon produtos/index.ts",
+    "start": "pm2 start processos.json",
+    "stop": "pm2 stop processos.json",
+    "restart": "pm2 restart processos.json",
+    "delete": "pm2 delete processos.json",
     "list": "pm2 list"
   },
   "keywords": [],

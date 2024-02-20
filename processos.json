@@ -1,0 +1,24 @@
+{
+    "apps": [
+        {
+            "name": "api-produtos",
+            "script": "./build/produtos/index.js",
+            "instances": "max",
+            "exec_mode": "cluster",
+            "env": {
+                "NODE_ENV": "production",
+                "PORT": "3001"
+            }
+        },
+        {
+            "name": "api-usuarios",
+            "script": "./build/usuarios/index.js",
+            "instances": 1,
+            "exec_mode": "fork",
+            "env": {
+                "NODE_ENV": "production",
+                "PORT": "3000"
+            }
+        }
+    ]
+}
